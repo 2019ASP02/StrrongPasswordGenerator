@@ -23,7 +23,7 @@ lgt = int(input("Enter the total lenght(greater than lenght of entered word and 
 lw = len(wrd) #lenght of word 
 lc = len(str(cod)) # lenght of number
 remaininglength = lgt - lw - lc  # calculate the lenght to add extra charator
-
+#print(remaininglength)
 # make it the list type
 wrd = list(wrd)
 
