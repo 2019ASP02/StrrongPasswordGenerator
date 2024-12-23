@@ -45,13 +45,14 @@ else:
     ms = ''
     ls = random.choice(pun) # last symbol it's exist last of the password
 
-
+'''
 #checking
 print(fs)
 print(processedword)
 print(ms)
 print(cod)
 print(ls)
+'''
 
 # join the parts of the password 
 spg = f"{fs}{processedword}{ms}{cod}{ls}"
