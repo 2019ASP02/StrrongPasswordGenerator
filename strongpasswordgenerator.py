@@ -22,7 +22,7 @@ lgt = int(input("Enter the total lenght(greater than lenght of entered word and 
 
 lw = len(wrd) #lenght of word 
 lc = len(str(cod)) # lenght of number
-lgt = lgt - lw - lc  # calculate the lenght to add extra charator
+remaininglength = lgt - lw - lc  # calculate the lenght to add extra charator
 
 # make it the list type
 wrd = list(wrd)
@@ -34,17 +34,27 @@ for i in range(0,lw-1,1):
     ow = wrd[i]
     nw = ow.upper() if n == 1 else ow.lower()
     wrd[i] = nw
+processedword = ''.join(wrd)
 
-if lgt > 1:
+if remaininglength > 1:
     fs = random.choice(pun) # first symbol it's exist first of the password
-    ms = random.choices(pun,k=lgt-2) # middle symbols it's exist middle of the password
+    ms = random.choices(pun,k=remaininglength-2) # middle symbols it's exist middle of the password
+    ls = random.choice(pun) # last symbol it's exist last of the password
+else:
+    fs = random.choice(pun) # first symbol it's exist first of the password
+    ms = ''
     ls = random.choice(pun) # last symbol it's exist last of the password
 
-# join the password parts
-spg.join(fs)
-spg.join(wrd)
-spg.join(ms)
-spg.join(str(cod))
-spg.join(ls)
+
+#checking
+print(fs)
+print(processedword)
+print(ms)
+print(cod)
+print(ls)
+
+# join the parts of the password 
+spg = f"{fs}{processedword}{ms}{cod}{ls}"
+
 #print the generated password
 print("Strong Password : ",spg)
