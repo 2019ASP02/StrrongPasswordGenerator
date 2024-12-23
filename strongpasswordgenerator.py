@@ -59,3 +59,11 @@ spg = f"{fs}{processedword}{ms}{cod}{ls}"
 
 #print the generated password
 print("Strong Password : ",spg)
+
+
+'''
+Enter a word that exist in password : apple
+Enter the number that exist in password : 123
+Enter the total lenght(greater than lenght of entered word and number) : 10
+Strong Password :  _aPpLe[]123-
+'''
